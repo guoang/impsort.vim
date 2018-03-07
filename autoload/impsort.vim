@@ -699,6 +699,8 @@ endfunction
 function! s:sort_range(line1, line2) abort
   let import_lines = s:_sort_range(a:line1, a:line2)
   let existing = getline(a:line1, a:line2)
+  let import_lines = [''] + import_lines
+
   if string(existing) != string(import_lines)
     " Only update if it changes something
     silent execute a:line1.','.a:line2.'delete _'
