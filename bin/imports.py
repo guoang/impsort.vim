@@ -2,11 +2,12 @@ from __future__ import print_function, unicode_literals
 
 import os
 import sys
-import jedi
-from jedi import settings
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'jedi'))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'parso'))
+
+import jedi
+from jedi import settings
 
 # Setting a cache for impsort.  It appears that the caches aren't compatible
 # across different versions.
